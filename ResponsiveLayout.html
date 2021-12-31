@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ResponsiveLayout</title>
+        <link rel="icon" href="./images/img3.png">
+        <style>
+           /* .navigation home:hover {
+                width: 46px;
+                height: 44px;
+                background-image: url(./images/img5.png) -230 -230;
+}*/
+
+#home a:hover {
+  background: url('./images/img2.png') 0 -45px;
+}
+
+#img4 a:hover {
+  background: url('./images/img4.png') -47px -45px;
+}
+
+#img5 a:hover {
+  background: url('./images/img5.png') -91px -45px;
+}
+            .navigation{
+               
+                height: 60px;
+                text-align: center;
+                background-color: rgb(115, 51, 235);
+            }
+            .header{
+                padding: 20px;
+                text-align: center;
+                background-color: rgb(9, 206, 206);
+                flex: 100%;
+            }
+            .container{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .feature1,.feature2,.feature3{
+                flex-wrap: wrap;
+                flex: 33%;
+                height: 200px;
+            }
+            .feature1{
+               
+               
+                background-color: rgb(243, 7, 184);
+           
+            }
+            .feature2{
+             
+               
+                background-color: rgb(218, 49, 63);
+           
+            }
+            .feature3{
+             
+                background-color: rgb(236, 97, 32);
+   
+            }
+            .signup{
+                flex: 100%;
+                text-align: center;
+                background-color: rgb(34, 238, 112);
+
+            }
+            .navigation h1{
+                background-image: url(../Desktop/spriteimage.svg);
+                height: 34px;
+                background-position: -17px -11px;
+                width: 180px;
+                float: right;
+            }
+            .content{
+                padding: 30px;
+                text-align: center;
+                background-color: rgb(160, 207, 30);
+               
+            }
+            
+            @media screen and (min-width:320px) and (max-width:480px){
+                .feature1{
+                    flex: 100%;
+                    background-color: gold;
+                }
+                .feature2{
+                    flex: 100%;
+                    background-color: rgb(111, 0, 255);
+                }
+                .feature3{
+                    flex: 100%;
+                    background-color: rgb(255, 0, 128);
+                }
+                .signup{
+                    flex: 100%;
+                    background-color: rgb(255, 0, 0);
+                }
+            }
+            @media screen and (min-width:481px) and (max-width:768px){
+                .feature1{
+                    flex: 50%;
+                    background-color: rgb(237, 143, 100);
+                }
+                .feature2{
+                    flex: 50%;
+                    background-color: rgb(114, 100, 237);
+                }
+                .feature3{
+                    flex: 50%;
+                    background-color: rgb(100, 237, 100);
+                }
+                .signup{
+                    flex: 50%;
+                    background-color: rgb(237, 100, 230);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class ="navigation" >
+            <nav>
+               <img id="home1" src="./images/home.png" > 
+             <nav>
+                <ul id="navlist">
+                    <li id="home"><a href="./images/img2.png"></a></li>
+                    <li id="img4"><a href="./images/img4.png"></a></li>
+                    <li id="img5"><a href="./images/img5.png"></a></li>
+                  </ul>
+                  
+
+            </div>
+        <div class ="header" > <h1> [HEADER]</h1></div>
+        <div class ="container">
+         <div class ="feature1" > <h1> [FEATURE]</h1></div>
+         <div class ="feature2" > <h1> [FEATURE]</h1></div>
+         <div class ="feature3"> <h1> [FEATURE]</h1></div>
+         <div class ="signup" > <h1> [SIGNUP]</h1></div>
+        </div>
+         <div class ="content" > <h1> [CONTENT]</h1></div>
+    </body>
+</html>
