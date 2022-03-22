@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+
+    <form method="get" id="form" action="submitPage.html" target="_blank">
+        <div>
+            <label>Choose Image : </label><input type="file" accept="image/*" name="image" id="image" required />
+            <br><br>
+            <label>Choose JSON File here: </label><input type="file" id="json" accept=".json" required />
+            <br><br>
+            <input type="submit" id="submit">
+        </div>
+    </form>
+    <script>
+        document.querySelector("#image").addEventListener("change", function() {
+            const reader = new FileReader();
+            reader.addEventListener("load", () => {
+                localStorage.setItem("image-store", reader.result);
+                console.log(reader.result);
+            });
+            reader.readAsDataURL(this.files[0]);
+        });
+        document.getElementById("json").addEventListener("change", function() {
+            var file_to_read = document.getElementById("json").files[0];
+            var fileread = new FileReader();
+            fileread.onload = function(e) {
+                var content = e.target.result;
+                var data = JSON.parse(content);
+                window.localStorage.setItem("myObject", JSON.stringify(data));
+            };
+            fileread.readAsText(file_to_read);
+        });
+    </script>
+</body>
+
+</html>
